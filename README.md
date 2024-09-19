@@ -25,12 +25,12 @@
 
 ## 🔗 API Endpoints
 
-- **POST** `api/posts?format=api`: Create a blog post.
+- **POST** `/api/posts?format=api`: Create a blog post.
 - **GET** `/api/posts`: Retrieve all posts.
 - **GET** `/api/posts?term=tech`: Filter by a search term (`?term=search_term`).
-- **GET** `/api/posts/<id>/`: Get a single post by its ID.
-- **PUT** `/api/posts/<id>/`: Update an existing post.
-- **DELETE** `/api/posts/<id>/`: Delete a post by its ID.
+- **GET** `/api/posts/<id>`: Get a single post by its ID.
+- **PUT** `/api/posts/<id>`: Update an existing post.
+- **DELETE** `/api/posts/<id>`: Delete a post by its ID.
 
 ## 🛠️ Setup & Installation
 
@@ -128,3 +128,9 @@ Here are some screenshots of the API being tested in Postman:
 
 ### 4. Search Term 
 ![Search tern](./images/search_term.png)
+
+### 5. Delete a Post 204 no content 
+![Delete Post](./images/204_no_content_delete_method.png)
+
+### 6. Patch a Post
+![Delete Post](./images/patch_method.png)
