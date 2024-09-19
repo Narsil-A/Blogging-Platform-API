@@ -50,17 +50,22 @@ $ cp .envs/.local/.postgres.example .envs/.local/.postgres
 .django 
 
 # General
+```bash
 USE_DOCKER=yes
 IPYTHONDIR=/app/.ipython
 DJANGO_SECRET_KEY="your secret key"
+```
 
 .postgres 
 # PostgreSQL
+
+```bash
 POSTGRES_HOST=postgres
 POSTGRES_PORT=5432
 POSTGRES_DB=blogging_platform_api
 POSTGRES_USER=postgres_user
 POSTGRES_PASSWORD=postgres_password
+```
 
 
 ### 2. Build the Docker Images:
@@ -105,12 +110,15 @@ $ docker-compose -f docker-compose.local.yml run --rm django pytest blog/tests/t
 
 Here are some screenshots of the API being tested in Postman:
 
+
+
 ### 1. Creating a New Post
 ![Create Post](./images/create_post.png)
 
-### 1.1 Bad Request 404 code creating a post 
+### 1.1 Bad Request 400 code creating a post
+(This may occur when required fields are missing)
 
-![Create Post 400 bad request](./images/create_post_404.png)
+![Create Post 400 bad request](./images/create_post_400.png)
 
 ### 2. Retrieving a Post
 ![Retrieve Post](./images/get_post.png)
