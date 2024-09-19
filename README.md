@@ -4,11 +4,13 @@
 
 ## 🔥 Tech Stack
 
-- **Cookiecutter Django**: The industry-standard, production-ready Django setup. With built-in Docker, PostgreSQL, and environment management, it’s the ultimate starter for serious developers.
-- **Django & Django REST Framework**: Leveraging the power of Django for web development and REST APIs, this platform ensures high performance and clean code.
-- **PostgreSQL**: Reliable, scalable database management for all your blogging needs.
-- **Docker**: Full Docker support for effortless deployment and consistent development across environments.
-- **Postman**: API tested and ready to handle anything you throw at it.
+- **Cookiecutter Django**: I used Cookiecutter Django to streamline the setup for this project. It comes with Docker, PostgreSQL, and environment management already configured, which helped me get started quickly while learning how these pieces fit together.
+- **Django & Django REST Framework**: For this project, I wanted to explore Django and Django REST Framework. They provided a solid foundation for building a functional API with clean code and fast performance.
+- **PostgreSQL**: I chose PostgreSQL for its reliability and scalability, and this project gave me hands-on experience working with it.
+- **Docker**: Using Docker ensured that the project environment was easy to manage and deploy, which made the development process smoother, especially for testing across different setups.
+- **Postman**: I tested the API thoroughly with Postman to ensure everything worked as expected. This was part of my learning process for debugging and refining API endpoints.
+
+- **Built for clarity**:  In line with the requirements of the technical test, this project focuses solely on the core API functionalities without implementing pagination, authentication, or authorization. This makes the code straightforward and easier to follow for testing and review.
 
 ## 💡 Key Features
 
@@ -49,7 +51,7 @@ $ cp .envs/.local/.postgres.example .envs/.local/.postgres
 
 .django 
 
-# General
+### General
 ```bash
 USE_DOCKER=yes
 IPYTHONDIR=/app/.ipython
@@ -57,7 +59,7 @@ DJANGO_SECRET_KEY="your secret key"
 ```
 
 .postgres 
-# PostgreSQL
+### PostgreSQL
 
 ```bash
 POSTGRES_HOST=postgres
@@ -109,8 +111,6 @@ $ docker-compose -f docker-compose.local.yml run --rm django pytest blog/tests/t
 ## 📸 API Testing with Postman
 
 Here are some screenshots of the API being tested in Postman:
-
-
 
 ### 1. Creating a New Post
 ![Create Post](./images/create_post.png)
