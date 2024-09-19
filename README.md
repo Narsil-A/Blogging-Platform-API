@@ -10,7 +10,6 @@
 - **Docker**: Full Docker support for effortless deployment and consistent development across environments.
 - **Postman**: API tested and ready to handle anything you throw at it.
 
-
 ## 💡 Key Features
 
 ### CRUD Operations:
@@ -25,7 +24,7 @@
 ## 🔗 API Endpoints
 
 - **POST** `api/posts?format=api`: Create a blog post.
-- **GET** `/api/posts`: Retrieve all posts
+- **GET** `/api/posts`: Retrieve all posts.
 - **GET** `/api/posts?term=tech`: Filter by a search term (`?term=search_term`).
 - **GET** `/api/posts/<id>/`: Get a single post by its ID.
 - **PUT** `/api/posts/<id>/`: Update an existing post.
@@ -34,21 +33,22 @@
 ## 🛠️ Setup & Installation
 
 ### 1. Clone the Repository:
-   
-   ```bash
+```bash
 $ git clone <repo-url>
 $ cd blogging_platform_api
+```
 
 ### Setting Up Environment Variables
 
 1. Copy the example environment files:
 
-   ```bash
-cp .envs/.local/.django.example .envs/.local/.django
-cp .envs/.local/.postgres.example .envs/.local/.postgres
+```bash
+$ cp .envs/.local/.django.example .envs/.local/.django
+$ cp .envs/.local/.postgres.example .envs/.local/.postgres
+```
 
 .django 
-   ```
+
 # General
 USE_DOCKER=yes
 IPYTHONDIR=/app/.ipython
@@ -65,20 +65,26 @@ POSTGRES_PASSWORD=postgres_password
 
 ### 2. Build the Docker Images:
 
+```bash
 $ docker-compose -f docker-compose.local.yml build
+```
 
 ### 3. Run the Application with Docker:
 
-   ```bash
+```bash
 $ docker-compose -f docker-compose.local.yml up
+```
 
 ### 4. Run Database Migrations:
 
+```bash
 $ docker-compose -f docker-compose.local.yml run --rm django python manage.py migrate
-
+```
 ### 5. Create a Superuser:
 
+```bash
 $ docker-compose -f docker-compose.local.yml run --rm django python manage.py createsuperuser
+```
 
 ### 6. Access the API:
 
@@ -88,12 +94,12 @@ Go to http://localhost:8000/api/posts/ or use Postman for testing.
 ## 🔧 Comprehensive Testing
 
 Test the application thoroughly to ensure the functionality of all aspects of the API:
-
+```bash
 $ docker-compose -f docker-compose.local.yml run --rm django pytest blog/tests/test_create_post.py
 $ docker-compose -f docker-compose.local.yml run --rm django pytest blog/tests/test_retrieve_post.py
 $ docker-compose -f docker-compose.local.yml run --rm django pytest blog/tests/test_update_post.py
 $ docker-compose -f docker-compose.local.yml run --rm django pytest blog/tests/test_delete_post.py
-
+```
 
 ## 📸 API Testing with Postman
 
