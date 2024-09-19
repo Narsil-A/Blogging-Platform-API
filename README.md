@@ -42,11 +42,11 @@ $ cd blogging_platform_api
 
 ### Setting Up Environment Variables
 
-1. Copy the example environment files:
+1. Create environment files:
 
 ```bash
-$ cp .envs/.local/.django.example .envs/.local/.django
-$ cp .envs/.local/.postgres.example .envs/.local/.postgres
+$ .envs/.local/.django
+$ .envs/.local/.postgres
 ```
 
 .django 
